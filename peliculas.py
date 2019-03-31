@@ -37,3 +37,23 @@ while True:
         for i in doc:
             if actor in i["actors"]:
                 print (i["title"])
+
+    #5. Mostrar el título y la url del póster de las tres películas
+    # con una media de puntuaciones más alta
+    # lanzadas entre dos fechas dadas.
+    if opcion==5:
+        fecha1=input("Introduce una fecha (AAAA-MM-DD): ")
+        fecha2=input("Introduce otra fecha (AAAA-MM-DD): ")
+        for i in doc:
+            media=sum(i["ratings"])/len(i["ratings"])
+            if fecha1<=i["releaseDate"] and fecha2>=i["releaseDate"]:
+                print()
+                print("Titulo: ",i["title"])
+                print("Poster: ",i["posterurl"])
+                print("Puntuacion: ",media)
+                print("*"*176)
+    if opcion==0:
+        break
+    if opcion<0 or opcion>5:
+        print("Opcion No Valida")
+    
