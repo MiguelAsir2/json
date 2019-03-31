@@ -24,3 +24,10 @@ while True:
                 cont+=1
             print(cont,"actores/actrices")
             cont=0
+ #3. Mostrar las peliculas que tengan en la sinopsis dos palabras dadas
+    if opcion==3:
+        pal1=input("Introduce una palabra: ")
+        pal2=input("Introduce otra palabra: ")
+        for i in doc:
+            if (pal1 in i["storyline"]) and (pal2 in i["storyline"]):
+                print(i["title"])
