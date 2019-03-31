@@ -31,3 +31,9 @@ while True:
         for i in doc:
             if (pal1 in i["storyline"]) and (pal2 in i["storyline"]):
                 print(i["title"])
+ #4. Mostrar las peliculas en las que haya trabajado el actor dado
+    if opcion==4:
+        actor=input("Introduce nombre de actor: ")
+        for i in doc:
+            if actor in i["actors"]:
+                print (i["title"])
