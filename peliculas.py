@@ -16,4 +16,11 @@ while True:
     if opcion==1:
         for i in doc:
             print("La pelicula %s es del año %s y dura %s"%(i["title"],i["year"],i["duration"]))
-  
+   #2. Muestra los títulos de las peliculas y el numero de actores.
+    if opcion==2:
+        for i in doc:
+            print("La pelicula %s tiene: "%(i["title"]),end="")
+            for i in i["actors"]:
+                cont+=1
+            print(cont,"actores/actrices")
+            cont=0
